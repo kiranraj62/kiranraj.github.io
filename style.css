@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap);
+:root {
+    --primary: #1A1C1E;
+    --textColor: #D3DDE2;
+    --sideBar: #222527;
+    --accent: #2BC9ED
+}
+
+body {
+    background-color: var(--primary);
+    margin: 0 !important;
+    color: var(--textColor)
+}
+
+span {
+    font-family: Quicksand, sans-serif
+}
+
+h1 {
+    font-family: Kanit, sans-serif;
+    color: var(--accent) !important
+}
+
+h3 {
+    font-family: Montserrat, sans;
+    color: var(--color-c) !important
+}
+
+
+.container {
+    display: flex
+}
+
+.navbar {
+    background-color: var(--sideBar);
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10
+}
+
+.navbarImage {
+    width: 20%
+}
+
+.navbarHeading {
+    font-size: 3.5rem;
+    line-height: 2.5rem
+}
+
+.navbarItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start center;
+}
+
+.navItem {
+    background-color: transparent;
+    border: none;
+    color: #c9c8c8;
+    font-size: 1.5rem;
+    font-family: Kanit, sans-serif;
+    padding: 10px;
+    border-radius: 10px
+}
+
+.theme {
+    align-self: center
+}
+
+.navItem:hover {
+    color: #c9c8c8b4;
+    border: 5px solid #c9c8c821
+}
+
+.active,
+.active:hover {
+    color: var(--accent);
+    border: 5px solid #00d0ff67
+}
+
+.navItem span {
+    margin-left: 15px
+}
+
+.navbarSocialMedia {
+    margin-bottom: 10px
+}
+
+.socialIcon {
+    color: var(--textColor);
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 13px
+}
+
+.socialIcon:hover {
+    color: var(--accent)
+}
+
+.body {
+    z-index: 0;
+    position: absolute;
+    left: 20%;
+    width: 80%;
+    font-family: Quicksand, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.myWorksContainer {
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 80px
+}
+
+.card {
+    background-color: var(--sideBar);
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px
+}
+
+.cardHeading {
+    color: var(--textColor)
+}
+
+.links {
+    color: #211ed4;
+    text-decoration: solid;
+    font-weight: 700
+}
+
+.static {
+    position: absolute;
+    max-width: 23.5%
+}
+
+.static:hover {
+    display: none
+}
+
+.aboutMeContainer {
+    display: none;
+    margin-top: 20px;
+    width: 80%
+}
+
+.aboutMeC1 {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-right: 5px solid var(--textColor)
+}
+
+.aboutmeHeading {
+    visibility: hidden
+}
+
+.aboutMeC2 {
+    width: 65%;
+    padding: 20px
+}
+
+.about {
+    visibility: hidden;
+    margin: 20px 0
+}
+
+.aboutmeImage {
+    border-radius: 50%;
+    width: 50%
+}
+
+.aboutMeTextHeading {
+    font-size: 3rem
+}
+
+.aboutMeText {
+    font-size: 2rem
+}
+
+.resume {
+    font-size: 2rem
+}
+
+.contactMeContainer {
+    display: none;
+    flex-direction: column;
+    padding: 10px
+}
+
+@media screen and (min-width:2000px) {
+    body {
+        font-size: 2rem
+    }
+    .navbarHeading {
+        font-size: 6rem;
+        line-height: 5rem
+    }
+    .navItem {
+        font-size: 3rem
+    }
+    .socialIcon {
+        font-size: 3rem
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .navbar {
+        width: 30%
+    }
+    .body {
+        left: 30%;
+        width: 70%
+    }
+    .card {
+        width: 35%
+    }
+    .static {
+        max-width: 35%
+    }
+    .aboutMeContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+    .aboutMeC1 {
+        border: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+    .aboutMeC2 {
+        width: 100%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        flex-direction: column
+    }
+    .navbar {
+        height: 25%;
+        width: 100%
+    }
+    .body {
+        left: 0;
+        top: 25%;
+        width: 100%
+    }
+    .myWorksContainer {
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0
+    }
+    .navbar {
+        justify-content: center
+    }
+    .navbarItems {
+        flex-direction: row
+    }
+    .navbarHeading {
+        display: none
+    }
+    .navItem span {
+        display: none
+    }
+    .navbarSocialMedia {
+        display: none
+    }
+    .card {
+        width: 80%
+    }
+    .static {
+        max-width: 80%
+    }
+    .aboutMeContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+    .aboutMeC1 {
+        border: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+    .aboutMeC2 {
+        width: 100%;
+        padding: 0
+    }
+    .about {
+        visibility: visible
+    }
+    .aboutmeHeading {
+        text-align: center;
+        font-size: 3rem;
+        line-height: 2rem;
+        visibility: visible
+    }
+    .aboutMeTextHeading {
+        font-size: 1.8rem
+    }
+    .aboutMeText {
+        font-size: 1.2rem
+    }
+    .resume {
+        font-size: 1.2rem
+    }
+}
